@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Sample Results</h1>
+    
+    {% for entry in sample_data %}
+    <h2>{{ entry.title }}</h2>
+    <table border="1">
+        <tr>
+            <th>Parameter</th>
+            <th>Result</th>
+        </tr>
+        {% for row in entry.data %}
+        <tr>
+            <td>{{ row.parameter }}</td>
+            <td>{{ row.result }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endfor %}
+</body>
+</html>
